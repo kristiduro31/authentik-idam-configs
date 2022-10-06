@@ -1,0 +1,27 @@
+
+<nav class="navbar navbar-default"style="margin-bottom: 0%;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="#" class="navbar-brand">Blog</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#">Latest Posts</a></li>
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="#">Computer Science</a></li>
+        <li><a href="#">Physics</a></li>
+        <li><a href="#">Biology</a></li>
+        <li><a href="#">Chemistry</a></li>
+    </ul>
+    </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#"><span class="glyphicon glyphicon-user"></span> Become a member !</a></li>
+      <li><a *ngIf="isAuthenticated; else noAuth" (click)="logout()"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
+<ng-template #noAuth>
+  <a (click)="login()"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+</ng-template>

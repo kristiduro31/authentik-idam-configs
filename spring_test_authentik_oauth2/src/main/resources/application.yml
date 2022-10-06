@@ -1,0 +1,15 @@
+server:
+  port: 9090
+
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          authentik:
+            client-id: 2edae6f7c9e24ffd48616826818709aea43a9c8b
+            client-secret: 5751d97992fee2e72d56c90700c571dbc34715836b6b8c940c30eb65ec09cfcaba62286bebf17c73051980bac66541d05658eb18ef03457313ba221d15e9efc1
+            scope: openid, email, profile
+        provider:
+          authentik:
+            issuer-uri: http://localhost:9000/application/o/123/
